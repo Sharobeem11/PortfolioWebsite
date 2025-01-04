@@ -1,0 +1,35 @@
+[
+    {
+      "role": "Frontend Developer",
+      "organization": "Webelocity",
+      "startDate": "Mar, 2024",
+      "endDate": "Jun, 2024",
+      "experiences": [
+        "Developed responsive and accessible web pages", 
+        "Accelerated development timelines by creating reusable React components"
+        ],
+      "imageSrc": "history/webelocity.png"
+    },
+    {
+      "role": "IT Support",
+      "organization": "Stubbe's Precast",
+      "startDate": "Jan, 2024",
+      "endDate": "Apr, 2024",
+      "experiences": [
+        "Resolved IT helpdesk tickets by troubleshooting",
+        "Conducted on-boarding process and MDM transfer"
+        ],
+      "imageSrc": "history/stubbes.png"
+    },
+    {
+      "role": "Data Analyst",
+      "organization": "Health Canada",
+      "startDate": "Jan, 2023",
+      "endDate": "Apr, 2023",
+      "experiences": [
+        "Worked on employment equity data analysis dashboard",
+        "Wrote Python scripts for data manipulation and cleaning"
+      ],
+      "imageSrc": "history/hc.png"
+    }
+  ]
