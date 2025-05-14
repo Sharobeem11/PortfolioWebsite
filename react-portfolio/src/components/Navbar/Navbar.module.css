@@ -21,6 +21,10 @@
     display: flex;
 }
 
+.menuBtn {
+    display: none;
+}
+
 .menuItems {
     display: flex;
     gap: 47px;
@@ -29,7 +33,7 @@
 
 .menuItems a {
     font-size: 25px;
-    color: var(--color-text);
+    color: var(--colour-text);
     text-decoration: none;
 }
 
