@@ -26,7 +26,10 @@ export const About = () => {
             <div className={styles.aboutItemText}>
               <h3>Education</h3>
               <p>
-                *UNDER CONSTRUCTION*
+                <ul>
+                  <li>Bachelor of Computer Science from University of Waterloo</li>
+                  <li>Bachelor of Business Administration from Wilfrid Laurier University</li>
+                </ul>
               </p>
             </div>
           </li>
@@ -36,7 +39,10 @@ export const About = () => {
             <div className={styles.aboutItemText}>
               <h3>Certifications</h3>
               <p>
-                *UNDER CONSTRUCTION*
+                <ul>
+                  <li>Certificate of Distinction: Ranking top 25% in Cayley Contest 2019
+                    - The Centre for Education in Mathematics and Computing</li>
+                </ul>
               </p>
             </div>
           </li>
@@ -46,7 +52,9 @@ export const About = () => {
             <div className={styles.aboutItemText}>
               <h3>Awards</h3>
               <p>
-                *UNDER CONSTRUCTION*
+                <ul>
+                  <li>2021 Proficiency Award in Computer Science, University - Forest Heights C. I.</li>
+                </ul>
               </p>
             </div>
           </li>

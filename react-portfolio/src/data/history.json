@@ -1,5 +1,16 @@
 [
     {
+      "role": "Operations Engineer",
+      "organization": "Pepper",
+      "startDate": "Jan, 2025",
+      "endDate": "Apr, 2025",
+      "experiences": [
+        "Spearheaded an AI-generated image project using Imagen 3 and Gemini", 
+        "Engineered tools and automation for onboarding distributor product data, refining image-match workflows"
+        ],
+      "imageSrc": "history/pepper.png"
+    },
+    {
       "role": "Frontend Developer",
       "organization": "Webelocity",
       "startDate": "Mar, 2024",
