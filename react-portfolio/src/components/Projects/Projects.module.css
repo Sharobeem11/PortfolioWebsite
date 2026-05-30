@@ -1,26 +1,62 @@
 @import "../../vars.css";
 
 .container {
-  margin-top: 76px;
-  color: var(--colour-text);
-  margin-left: 10%;
-  margin-right: 10%;
+  padding: 0 0 120px;
+  position: relative;
+  z-index: 1;
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.container.visible {
+  opacity: 1;
+  transform: none;
+}
+
+.inner {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 clamp(20px, 5vw, 60px);
+}
+
+.header {
+  margin-bottom: 56px;
+}
+
+.label {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 12px;
 }
 
 .title {
-  font-size: 35px;
+  font-family: var(--font-display);
+  font-size: clamp(28px, 4vw, 42px);
   font-weight: 700;
-  letter-spacing: 1.75px;
-  text-transform: uppercase;
+  letter-spacing: -1px;
+  line-height: 1.15;
+  margin-bottom: 16px;
 }
 
-.projects {
-  margin-top: 37px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
-  width: 100%;
+.sub {
+  font-size: 15px;
+  color: var(--text2);
+  line-height: 1.7;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+@media (max-width: 700px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
 }
