@@ -1,11 +1,17 @@
 :root {
-    /* Colours */
-    --colour-text: #fff;
-    --colour-primary: #576cbc;
-    --colour-secondary: #19376d;
-    --colour-dark: #0b2447;
-    --colour-bg: #04152d;
-
-    /* Fonts */
-    --font-roboto: "Roboto";
+  --bg: #060a12;
+  --bg2: #0c1220;
+  --bg3: #111927;
+  --accent: #4f8ef7;
+  --accent2: #7eb8ff;
+  --accent-dim: rgba(79, 142, 247, 0.12);
+  --text: #f0f4ff;
+  --text2: #8a9ac0;
+  --text3: #4d5e80;
+  --border: rgba(255, 255, 255, 0.07);
+  --border2: rgba(79, 142, 247, 0.25);
+  --card: #0e1626;
+  --radius: 16px;
+  --font-display: 'Syne', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
 }
