@@ -1,38 +1,70 @@
-import React from "react";
-
+import React, { useEffect, useRef } from "react";
 import styles from "./Contact.module.css";
-import { getImageUrl } from "../../utils";
-// import emailIcon from "../../assets/contact/emailIcon.png";
-// import linkedinIcon from "../../assets/contact/linkedinIcon.png";
-// import githubIcon from "../../assets/contact/githubIcon.png";
 
 export const Contact = () => {
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => entries.forEach((e) => {
+        if (e.isIntersecting) e.target.classList.add(styles.visible);
+      }),
+      { threshold: 0.1 }
+    );
+    if (sectionRef.current) observer.observe(sectionRef.current);
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <footer id="contact" className={styles.container}>
-      <div className={styles.text}>
-        <h2>Contact</h2>
-        <p>Feel free to reach out!</p>
+    <section className={styles.container} id="contact" ref={sectionRef}>
+      <div className={styles.inner}>
+        <div className={styles.card}>
+          <div className={styles.left}>
+            <span className={styles.label}>Get in touch</span>
+            <h2 className={styles.title}>Let's build something together</h2>
+            <p className={styles.desc}>
+              Whether it's a job opportunity, a project, or just a chat — I'd love to hear
+              from you. My inbox is always open.
+            </p>
+            <a href="mailto:sharobeem11@hotmail.com" className={styles.btn}>
+              Send me an email
+            </a>
+          </div>
+          <div className={styles.links}>
+            <a href="mailto:sharobeem11@hotmail.com" className={styles.link}>
+              <div className={styles.linkIcon}>✉️</div>
+              <div className={styles.linkText}>
+                <span className={styles.linkLabel}>Email</span>
+                <span className={styles.linkValue}>sharobeem11@hotmail.com</span>
+              </div>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/michael-sharobeem-3a8bb1202"
+              className={styles.link}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <div className={styles.linkIcon}>💼</div>
+              <div className={styles.linkText}>
+                <span className={styles.linkLabel}>LinkedIn</span>
+                <span className={styles.linkValue}>michael-sharobeem-3a8bb1202</span>
+              </div>
+            </a>
+            <a
+              href="https://www.github.com/Sharobeem11"
+              className={styles.link}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <div className={styles.linkIcon}>🐙</div>
+              <div className={styles.linkText}>
+                <span className={styles.linkLabel}>GitHub</span>
+                <span className={styles.linkValue}>github.com/Sharobeem11</span>
+              </div>
+            </a>
+          </div>
+        </div>
       </div>
-      <ul className={styles.links}>
-        <li className={styles.link}>
-          <img src={getImageUrl("contact/emailIcon.png")} alt="Email icon" />
-          {/* <img src={emailIcon} alt="Email icon" /> */}
-          <a href="mailto:sharobeem11@hotmail.com">sharobeem11@hotmail.com</a>
-        </li>
-        <li className={styles.link}>
-          <img
-            src={getImageUrl("contact/linkedinIcon.png")}
-            // src={linkedinIcon}
-            alt="LinkedIn icon"
-          />
-          <a href="https://www.linkedin.com/michael-sharobeem-3a8bb1202">linkedin.com/michael-sharobeem-3a8bb1202</a>
-        </li>
-        <li className={styles.link}>
-          <img src={getImageUrl("contact/githubIcon.png")} alt="Github icon" />
-          {/* <img src={githubIcon} alt="Github icon" /> */}
-          <a href="https://www.github.com/Sharobeem11">github.com/Sharobeem11</a>
-        </li>
-      </ul>
-    </footer>
+    </section>
   );
 };
